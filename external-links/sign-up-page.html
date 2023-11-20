@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copnow-sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'poppins', sans-serif ;
+        }
+
+        body{
+            padding: 2rem;
+            display: flex;
+            font-size: 14px;
+        }
+
+        .main-container{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .second-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 30rem;
+        }
+
+        .main-container img{
+            width: 13rem;
+        }
+
+        span{
+            color: rgb(80,167,239);
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1.2rem;
+        }
+
+        label{
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.932);
+        }
+
+        input{
+            width: 100%;
+            padding: 1rem;
+            margin-top: 8px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid rgba(128, 128, 128, 0.644);
+        }
+
+        input:hover{
+            border: 1px solid rgb(80,167,239);
+        }
+
+        input:focus{
+            box-shadow: 0 0 3px rgb(80,167,239);
+            border: 1px solid rgb(80,167,239);
+        }
+
+        .check{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .remember{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            /* width: 10rem; */
+        }
+
+        #checkbox{
+            width: initial;
+            height: initial;
+        }
+
+        button{
+            background-color: rgb(80,167,239);
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgb(80,167,239);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        button:hover{
+            background: transparent;
+            color: rgb(80,167,239);
+            border: 1px solid rgb(80,167,239);
+            transition: .3s ease-in;
+        }
+
+        .footer{
+            text-align: center;
+        }
+
+        form a{
+            text-decoration: none;
+        }
+
+
+        /* MEDIA QUERY */
+
+        @media (max-width:600px){
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .first-container{
+                display: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+
+<!-- BODY -->
+
+
+<body>
+    <div class="main-container">
+        <div class="first-container">
+
+        </div>
+
+
+        <div class="second-container">
+            <a href="/index.html"><img src="/images/copnow-logo.png" alt=""></a>
+            <h1>Create An Account</h1>
+            <p>Please fill the form below to set up an account.</p>
+            <form action="" method="post">
+                <label for="first">First Name
+                    <input type="text" name="first" id="" placeholder="Enter first name">
+                </label>
+                <label for="last">Last Name
+                    <input type="text" name="last" id="" placeholder="Enter last name">
+                </label>
+                <label for="email">Email
+                    <input type="email" name="email" id="" placeholder="Enter your email address">
+                </label>
+                <label for="password">Password
+                    <input type="password" name="password" id="" placeholder="At least 8 characters">
+                </label>
+                <label for="con-password">Password
+                    <input type="password" name="con-password" id="" placeholder="confirm your password">
+                </label>
+                
+    
+                <button>Sign Up</button>
+    
+                <p class="footer">Not your first time? <a href="sign-up.html"><span>Login</span></a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copnow</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+
+    <!-- STYLES -->
+    
+<style>
+    body{
+        position: relative;
+        padding: 2rem;
+    }
+
+    .first-container{
+        position: relative;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-container img{
+        width: 45rem;
+        height: 30rem;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 20px  rgba(80, 167, 239, 0.438);
+    }
+
+    .watch-info{
+        display: flex;
+        gap: 3rem;
+        height: fit-content;
+    }
+
+    .watch-info .container-info{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rate{
+        display: flex;
+    }
+
+    .watch-info p .star{
+        color: gold;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .price{
+        display: flex;
+        align-items: center;
+    }
+
+    .watch-info .h1{
+        color: rgb(80,167,239);
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .color{
+        width: 15px;
+        height: 15px;
+        background-color: gray;
+    }
+
+    .watch-info span{
+        color: rgba(128, 128, 128, 0.637);
+        font-weight: 600;
+    }
+
+    .add-to-cart{
+        margin-top: -3.3rem;
+        align-self: flex-start;
+        /* display: flex; */
+    }
+
+    .cart-div a{
+        width: 70rem;
+    }
+
+    .cart-div{
+        /* display: flex; */
+    }
+
+    .watch-info button{
+        color: #fff;
+    }
+
+    .watch-info button:hover{
+        color: #000;
+    }
+
+    .watch-info .buy{
+        width: 100%;
+        padding: 0.4rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid rgb(80,167,239);
+        color: #000;
+        transition: .3s;
+    }
+
+    .watch-info .buy:hover{
+        background-color: rgb(80,167,239);
+        color: #fff;
+    }
+
+    .description{
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        background-color: rgba(128, 128, 128, 0.164);
+    }
+
+    .description h3{
+        margin-bottom: 1.5rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+    }
+
+    .swiper{
+        max-width: 1500px ;
+        padding: 0;
+    }
+
+    .swiper-container{
+        width: 100% !important;
+        padding: 0;
+    }
+
+    .related-products{
+        border-top: 2px solid gray;
+        padding-top: 3rem;
+    }
+
+    /* media query */
+
+    @media(max-width:700px){
+        body{
+            padding: 0 ;
+        }
+        header{
+            padding: auto;
+        }
+
+        .first-container{
+            padding: 3rem 1.5rem;
+        }
+
+        .watch-info{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first-container img{
+            width: 100%;
+            height: 20rem;
+        }
+
+        .add-to-cart{
+            margin: 1rem 0;
+        }
+
+        .cart-div{
+            /* display: flex; */
+        }
+        
+
+        .swiper{
+            padding: 0.5rem 0;
+        }
+
+        .related-products{
+        border-top: 2px solid gray;
+        padding: 1rem 1rem 0;
+    }
+        
+    }
+
+</style>
+
+
+
+
+    <!-- MAIN -->
+
+
+    <header>
+        <div class="header-one">
+            <div class="header-logo">
+                <a href="/index.html"><img src="/images/copnow-logo.png" alt=""></a>
+            </div>
+            <div class="header-search">
+                <input type="search" placeholder="search brands, products, categories...">
+                <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="sign-in">
+                <div class="sign-in-content"> <a href="/external-links/sign-up.html">Sell</a></div>
+                <div class="sign-in-content"> <a href="/external-links/sign-up.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
+                <div class="sign-in-content"> <a href="/external-links/sign-up.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></div>
+            </div>
+            
+        </div>
+
+        <div class="header-two">
+            <ul class="header-ul">
+                <li><a href="#" class="header-shortcut">Clothing <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="drop-down">
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Bottoms</a></li>
+                        <li><a href="#">Gowns</a></li>
+                        <li><a href="#">Suits</a></li>
+                        <li><a href="#">Corporates</a></li>
+                        <li><a href="#">Native</a></li>
+                        <li><a href="#">Underwears</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="header-ul">
+                <li><a href="#" class="header-shortcut">Headwears <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="drop-down">
+                        <li><a href="#">Caps</a></li>
+                        <li><a href="#">Hats</a></li>
+                        <li><a href="#">Wigs</a></li>
+                        <li><a href="#">Hairs</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="header-ul">
+                <li><a href="#" class="header-shortcut">Accessories <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="drop-down">
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="header-ul">
+                <li><a href="#" class="header-shortcut">Footwears <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="drop-down">
+                        <li><a href="#">Coorporate</a></li>
+                        <li><a href="#">Sneakers And Sports</a></li>
+                        <li><a href="#">FlipFlops, Slides And Sandals </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="back">
+        <a href="/index.html" class="go-back">back</a>
+    </div>
+
+    <div class="first-container" >
+        <div class="watch-info">
+            <img src="/images/accessories.jpg" alt="" width="300rem" height="300rem">
+            <div class="container-info">
+                <h2>Hannah Martin Wristwatch</h2>
+                <p><span>Categories:</span> Wristwatch</p>
+                <p class="rate"><span>Rating: </span> <span class="star"> ★ ★ ★ ★ ★</span> (5) </p>
+                <p class="price"><span>Price:</span> <span class="h1">₦31,500</span></p>
+                <p><span>Color:</span> <span class="color"></span></p>
+                <p><span>Quantity:</span></p>
+                <div class="add-to-cart third-container-cart"></div>
+                <a href="#" class="buy"> Buy Now</a> 
+            </div>
+        </div>
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, facilis esse. Animi eius asperiores explicabo assumenda, corporis,
+                 quia error doloribus minima aliquam illo sunt quisquam sit saepe et ipsum vitae officiis distinctio! Aspernatur, quia ipsum quo minima fuga quibusdam nisi,
+                  totam atque repellat sed maiores temporibus.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="related-products">
+        <h2>Related products</h2>
+    </div>
+
+   
+    <div class="swiper">
+        <div class="slide-content mySwiper">
+            <div class="third-container-cards swiper-wrapper">
+
+                <swiper-container  class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+                    centered-slides="false" autoplay-delay="4000" autoplay-disable-on-interaction="false" slides-per-view="auto">
+
+                        
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="third-container-items">
+                                <img src="/images/accessories.jpg" alt="">
+                                <div class="items-info">
+                                    <div class="item-name">
+                                        <p>Hannah Martin Wristwatch</p>
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <p class="third-container-price">₦31,500</p>
+                                    <p class="third-class-store">By Nana Store</p>
+                                    <div class="third-container-cart">
+                                        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                                        <button><a href="/external-links/product-info.html"> Buy Now</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                </swiper-container>
+            </div>
+        </div>    
+        
+    </div>
+
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script> 
+
+</body>
+</html>
